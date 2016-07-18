@@ -30,7 +30,7 @@
     // 1. Setting the labels to "empty" so that they don't display the placeholder data from the storyboard.
     self.currentDateLabel.text = @"";
     self.ageLabel.text = @"";
-    self.nextBirthdayLabel.text = <#based on the pattern with the first two, what goes here?#>;
+    self.nextBirthdayLabel.text = @"";
     
     // We'll need to format several dates, so let's set up a formatter object that we can reuse
     self.dateFormatter = [[NSDateFormatter alloc] init];
@@ -59,16 +59,16 @@
     NSDate *birthdate = sender.date;
     
     // 7. We need to use the user's birthdate and today's date to calculate their age. Fortunately, we have a method already defined called "findAgeFromBirthdate" that does just that. How do we call it?
-    int age = [self <#how do we call the above method here?#>];
+    int age = [self findAgeFromBirthdate:birthdate];
     
     // 9. Once we calculate the user's age, we need to display it to them in the age label
-    self.ageLabel.text = [NSString stringWithFormat:@"%d", <#what goes here?#>];
+    self.ageLabel.text = [NSString stringWithFormat:@"%d", age];
     
     // 10. Now, let's figure out their next birthday. Wouldn't you know there is a pre-existing method for that too. You just need to call it.
-    NSDate *nextBirthday = [self <#what's the name of the method that determines their next birthday?#>];
+    NSDate *nextBirthday = [self findNextBirthdayUsingBirthdate:birthdate];
     
     // 14. Once you get the date, you need to display it in the appropriate label. Don't forget to format it into a pretty string first.
-    self.nextBirthdayLabel.text = [self.dateFormatter stringFromDate:<#which date?#>];
+    self.nextBirthdayLabel.text = [self.dateFormatter stringFromDate:nextBirthday];
 }
 
 #pragma mark - private methods
@@ -77,12 +77,12 @@
 {
     // 4. We need to get the current date. I bet the system already knows what it is. How do we ask it? The variable today below will store our date object, but what belongs on the right side of the equals sign? Search the documentation window you opened earlier for "NSDate" to find how to create a new date object initialized to today (look in the tasks list on the left of the doc window. It has many common tasks you might want to perform with the class you've looked up).
     
-    NSDate *today = <#What goes here?#>;
+    NSDate *today = [NSDate date];
     
     // 5. Once you have a date object in the today variable, you need to show that date in the "currentDateLabel" on screen for your user. Up in viewDidLoad, we set the value of several labels to "empty" string. What property of the label did we access?
     // 6. For the right side of the above instruction, can we just put "today" after the equals sign? What is that dateFormatter object we created earlier used for? Is it involved in the above instruction (look up the documentation for the NSDateFormatter class; I think we might want a "string" from a "date")?
     
-    self.currentDateLabel.<#which property of the UILabel should we be setting here?#> = <#Can we just put the today variable here?#>;
+    self.currentDateLabel.text = [self.dateFormatter stringFromDate:today];
 }
 
 - (int)findAgeFromBirthdate:(NSDate *)birthdate
@@ -102,7 +102,7 @@
 }
 
 - (NSDate *)findNextBirthdayUsingBirthdate:(NSDate *)birthdate
-{l
+{
     // This determines which calendar we're using. Could be Gregorian (the one we use), or another one, e.g. the Buddhist or Jewish calendars.
     NSCalendar *calendar = [NSCalendar currentCalendar];
     
@@ -113,21 +113,29 @@
     NSInteger currentYear = [calendar component:NSCalendarUnitYear fromDate:[NSDate date]];
     
     // 11. This should change the year of the birthdate components object to this year. We're trying to determine what the user's birthday is for the current year.
-    [birthdateComponents setYear:<#what goes here?#>];
+    [birthdateComponents setYear:currentYear];
     
     // 12. This should convert the birthdateComponents object back into a regular NSDate object (search for NSDateComponents docs and look in the sidebar under tasks. There should be a mention of accessing the date).
-    NSDate *currentYearBirthday = [birthdateComponents <#which property do we want?#>];
+    NSDate *currentYearBirthday = birthdateComponents.date;
     
-    // The above NSDate object represents the user's birthday for this year. We now need to add 1 year to it to determine the user's next birthday. The following object is a dateComponents object that only has its month property set. It represents 12 months of time.
-    NSDateComponents *oneYear = [[NSDateComponents alloc] init];
-    [oneYear setMonth:12];
-    
-    // 13. We can use the above "oneYear" object and add it to "currentYearBirthday" to determine the user's next birthday.
-    NSDate *nextBirthday = [calendar dateByAddingComponents:<#we need to reference the year component object here#> toDate:<#which date object should we use?#> options:0];
-    
-    
-    // We send the nextBirthday object back to where this method was called (#10)
-    return nextBirthday;
+    // Descending means the user's birthday hasn't yet happened this year
+    if ([currentYearBirthday compare:[NSDate date]] == NSOrderedDescending)
+    {
+        return currentYearBirthday;
+    }
+    else
+    {
+        // The above NSDate object represents the user's birthday for this year. We now need to add 1 year to it to determine the user's next birthday. The following object is a dateComponents object that only has its month property set. It represents 12 months of time.
+        NSDateComponents *oneYear = [[NSDateComponents alloc] init];
+        [oneYear setMonth:12];
+        
+        // 13. We can use the above "oneYear" object and add it to "currentYearBirthday" to determine the user's next birthday.
+        NSDate *nextBirthday = [calendar dateByAddingComponents:oneYear toDate:currentYearBirthday options:0];
+        
+        
+        // We send the nextBirthday object back to where this method was called (#10)
+        return nextBirthday;
+    }
 }
 
 @end
