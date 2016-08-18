@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF82EC8C1D65EDDC00CFB601 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC8B1D65EDDC00CFB601 /* AppDelegate.swift */; };
+		DF82EC8E1D65EDDC00CFB601 /* DynamicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC8D1D65EDDC00CFB601 /* DynamicsViewController.swift */; };
+		DF82EC901D65EDDC00CFB601 /* TicTacToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC8F1D65EDDC00CFB601 /* TicTacToeViewController.swift */; };
+		DF82EC931D65EDDC00CFB601 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF82EC911D65EDDC00CFB601 /* Main.storyboard */; };
+		DF82EC951D65EDDC00CFB601 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF82EC941D65EDDC00CFB601 /* Assets.xcassets */; };
+		DF82EC981D65EDDC00CFB601 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF82EC961D65EDDC00CFB601 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DF82EC881D65EDDC00CFB601 /* DynamicGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF82EC8B1D65EDDC00CFB601 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DF82EC8D1D65EDDC00CFB601 /* DynamicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicsViewController.swift; sourceTree = "<group>"; };
+		DF82EC8F1D65EDDC00CFB601 /* TicTacToeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewController.swift; sourceTree = "<group>"; };
+		DF82EC921D65EDDC00CFB601 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DF82EC941D65EDDC00CFB601 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF82EC971D65EDDC00CFB601 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DF82EC991D65EDDC00CFB601 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF82EC851D65EDDC00CFB601 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF82EC7F1D65EDDC00CFB601 = {
+			isa = PBXGroup;
+			children = (
+				DF82EC8A1D65EDDC00CFB601 /* DynamicGame */,
+				DF82EC891D65EDDC00CFB601 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF82EC891D65EDDC00CFB601 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EC881D65EDDC00CFB601 /* DynamicGame.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF82EC8A1D65EDDC00CFB601 /* DynamicGame */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EC8B1D65EDDC00CFB601 /* AppDelegate.swift */,
+				DF82EC8D1D65EDDC00CFB601 /* DynamicsViewController.swift */,
+				DF82EC8F1D65EDDC00CFB601 /* TicTacToeViewController.swift */,
+				DF82EC911D65EDDC00CFB601 /* Main.storyboard */,
+				DF82EC941D65EDDC00CFB601 /* Assets.xcassets */,
+				DF82EC961D65EDDC00CFB601 /* LaunchScreen.storyboard */,
+				DF82EC991D65EDDC00CFB601 /* Info.plist */,
+			);
+			path = DynamicGame;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF82EC871D65EDDC00CFB601 /* DynamicGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF82EC9C1D65EDDC00CFB601 /* Build configuration list for PBXNativeTarget "DynamicGame" */;
+			buildPhases = (
+				DF82EC841D65EDDC00CFB601 /* Sources */,
+				DF82EC851D65EDDC00CFB601 /* Frameworks */,
+				DF82EC861D65EDDC00CFB601 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DynamicGame;
+			productName = DynamicGame;
+			productReference = DF82EC881D65EDDC00CFB601 /* DynamicGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF82EC801D65EDDC00CFB601 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "The Iron Yard";
+				TargetAttributes = {
+					DF82EC871D65EDDC00CFB601 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = S25RE6SHJT;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DF82EC831D65EDDC00CFB601 /* Build configuration list for PBXProject "DynamicGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF82EC7F1D65EDDC00CFB601;
+			productRefGroup = DF82EC891D65EDDC00CFB601 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF82EC871D65EDDC00CFB601 /* DynamicGame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF82EC861D65EDDC00CFB601 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF82EC981D65EDDC00CFB601 /* LaunchScreen.storyboard in Resources */,
+				DF82EC951D65EDDC00CFB601 /* Assets.xcassets in Resources */,
+				DF82EC931D65EDDC00CFB601 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF82EC841D65EDDC00CFB601 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF82EC901D65EDDC00CFB601 /* TicTacToeViewController.swift in Sources */,
+				DF82EC8C1D65EDDC00CFB601 /* AppDelegate.swift in Sources */,
+				DF82EC8E1D65EDDC00CFB601 /* DynamicsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DF82EC911D65EDDC00CFB601 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF82EC921D65EDDC00CFB601 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DF82EC961D65EDDC00CFB601 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF82EC971D65EDDC00CFB601 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DF82EC9A1D65EDDC00CFB601 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DF82EC9B1D65EDDC00CFB601 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF82EC9D1D65EDDC00CFB601 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S25RE6SHJT;
+				INFOPLIST_FILE = DynamicGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiy.DynamicGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DF82EC9E1D65EDDC00CFB601 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S25RE6SHJT;
+				INFOPLIST_FILE = DynamicGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiy.DynamicGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF82EC831D65EDDC00CFB601 /* Build configuration list for PBXProject "DynamicGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF82EC9A1D65EDDC00CFB601 /* Debug */,
+				DF82EC9B1D65EDDC00CFB601 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF82EC9C1D65EDDC00CFB601 /* Build configuration list for PBXNativeTarget "DynamicGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF82EC9D1D65EDDC00CFB601 /* Debug */,
+				DF82EC9E1D65EDDC00CFB601 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF82EC801D65EDDC00CFB601 /* Project object */;
+}
