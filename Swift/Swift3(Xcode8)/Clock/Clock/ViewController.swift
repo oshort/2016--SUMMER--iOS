@@ -11,14 +11,14 @@ import Foundation
 
 class ViewController: UIViewController
 {
-    //@IBOutlet weak var clockView: ClockView!
-    var clockView: ClockView!
+    @IBOutlet weak var clockView: ClockView!
+    //var clockView: ClockView!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        clockView = ClockView(frame: CGRect(x: view.center.x - 100, y: view.center.y - 100, width: 200, height: 200))
-        view.addSubview(clockView)
+        //clockView = ClockView(frame: CGRect(x: view.center.x - 100, y: view.center.y - 100, width: 200, height: 200))
+        //view.addSubview(clockView)
         clockView.timezone = NSTimeZone(name: "America/New York")
     }
     

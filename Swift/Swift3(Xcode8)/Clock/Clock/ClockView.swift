@@ -67,14 +67,14 @@ class ClockView: UIView
     {
         let secondsAsRadians = Float(Double(seconds) / 60.0 * 2.0 * M_PI - M_PI_2)
         let handRadius = CGFloat(frame.size.width / 2.8)
-        return CGPoint(x: handRadius*CGFloat(cosf(secondsAsRadians)) + boundsCenter.x, y: handRadius*CGFloat(sinf(secondsAsRadians)) + boundsCenter.y)
+        return CGPoint(x: handRadius*CGFloat(cosf(secondsAsRadians)) + frame.size.width/2.0, y: handRadius*CGFloat(sinf(secondsAsRadians)) + frame.size.height/2.0)
     }
     
     func minutesHandPosition() -> CGPoint
     {
         let minutesAsRadians = Float(Double(minutes) / 60.0 * 2.0 * M_PI - M_PI_2)
         let handRadius = CGFloat(frame.size.width / 3.2)
-        return CGPoint(x: handRadius*CGFloat(cosf(minutesAsRadians)) + boundsCenter.x, y: handRadius*CGFloat(sinf(minutesAsRadians)) + boundsCenter.y)
+        return CGPoint(x: handRadius*CGFloat(cosf(minutesAsRadians)) + frame.size.width/2.0, y: handRadius*CGFloat(sinf(minutesAsRadians)) + frame.size.height/2.0)
     }
     
     func hourHandPosition() -> CGPoint
@@ -82,7 +82,7 @@ class ClockView: UIView
         let halfClock = Double(hours) + Double(minutes) / 60.0
         let hoursAsRadians = Float(halfClock / 12.0 * 2.0 * M_PI - M_PI_2)
         let handRadius = CGFloat(frame.size.width / 4.2)
-        return CGPoint(x: handRadius*CGFloat(cosf(hoursAsRadians)) + boundsCenter.x, y: handRadius*CGFloat(sinf(hoursAsRadians)) + boundsCenter.y)
+        return CGPoint(x: handRadius*CGFloat(cosf(hoursAsRadians)) + frame.size.width/2.0, y: handRadius*CGFloat(sinf(hoursAsRadians)) + frame.size.height/2.0)
     }
 
     override func draw(_ rect: CGRect)
@@ -95,7 +95,7 @@ class ClockView: UIView
         
         // clock's center
         var radius: CGFloat = 6.0
-        let center2 = CGRect(x: boundsCenter.x - radius, y: boundsCenter.y - radius, width: 2 * radius, height: 2 * radius)
+        let center2 = CGRect(x: frame.size.width/2.0 - radius, y: frame.size.height/2.0 - radius, width: 2 * radius, height: 2 * radius)
         cxt?.addEllipse(inRect: center2)
         cxt?.setFillColor(digitColor.cgColor)
         cxt?.fillPath()
@@ -139,7 +139,7 @@ class ClockView: UIView
         let minHandPos = minutesHandPosition()
         cxt?.setStrokeColor(digitColor.cgColor)
         cxt?.beginPath()
-        cxt?.moveTo(x: boundsCenter.x, y: boundsCenter.y)
+        cxt?.moveTo(x: frame.size.width/2.0, y: frame.size.height/2.0)
         cxt?.setLineWidth(4.0)
         cxt?.addLineTo(x: minHandPos.x, y: minHandPos.y)
         cxt?.strokePath()
@@ -147,7 +147,7 @@ class ClockView: UIView
         let hourHandPos = hourHandPosition()
         cxt?.setStrokeColor(digitColor.cgColor)
         cxt?.beginPath()
-        cxt?.moveTo(x: boundsCenter.x, y: boundsCenter.y)
+        cxt?.moveTo(x: frame.size.width/2.0, y: frame.size.height/2.0)
         cxt?.setLineWidth(4.0)
         cxt?.addLineTo(x: hourHandPos.x, y: hourHandPos.y)
         cxt?.strokePath()
@@ -155,7 +155,7 @@ class ClockView: UIView
         let secHandPos = secondsHandPosition()
         cxt?.setStrokeColor(UIColor.red.cgColor)
         cxt?.beginPath()
-        cxt?.moveTo(x: boundsCenter.x, y: boundsCenter.y)
+        cxt?.moveTo(x: frame.size.width/2.0, y: frame.size.height/2.0)
         cxt?.setLineWidth(1.0)
         cxt?.addLineTo(x: secHandPos.x, y: secHandPos.y)
         cxt?.strokePath()
@@ -163,7 +163,7 @@ class ClockView: UIView
         // second hand's center
         
         radius = 3.0
-        let center3 = CGRect(x: boundsCenter.x - radius, y: boundsCenter.y - radius, width: 2 * radius, height: 2 * radius)
+        let center3 = CGRect(x: frame.size.width/2.0 - radius, y: frame.size.height/2.0 - radius, width: 2 * radius, height: 2 * radius)
         cxt?.addEllipse(inRect: center3)
         cxt?.setFillColor(UIColor.red.cgColor)
         cxt?.fillPath()

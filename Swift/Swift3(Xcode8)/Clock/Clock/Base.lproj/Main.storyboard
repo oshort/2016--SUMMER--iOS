@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11156"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,8 +18,24 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Uw-73-wOS" customClass="ClockView" customModule="Clock" customModuleProvider="target">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2Uw-73-wOS" secondAttribute="height" multiplier="1:1" id="0sW-MI-Lr6"/>
+                                    <constraint firstAttribute="width" constant="200" id="5AG-je-1OA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.27272099256515503" green="0.27277329564094543" blue="0.27271226048469543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2Uw-73-wOS" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="238-Qb-5sV"/>
+                            <constraint firstItem="2Uw-73-wOS" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="jwd-Uk-4ps"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clockView" destination="2Uw-73-wOS" id="ZFH-s1-zwI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
