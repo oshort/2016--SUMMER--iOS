@@ -8,26 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		DF80A8801D6B8AFD0007DCA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF80A87F1D6B8AFD0007DCA3 /* AppDelegate.swift */; };
+		DF80A8851D6B8AFD0007DCA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF80A8831D6B8AFD0007DCA3 /* Main.storyboard */; };
 		DF80A8871D6B8AFD0007DCA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF80A8861D6B8AFD0007DCA3 /* Assets.xcassets */; };
+		DF80A88A1D6B8AFD0007DCA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF80A8881D6B8AFD0007DCA3 /* LaunchScreen.storyboard */; };
 		DF80A8921D6B8B3C0007DCA3 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF80A8911D6B8B3C0007DCA3 /* ClockView.swift */; };
 		DF80A8941D6B8BD60007DCA3 /* WorldTimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF80A8931D6B8BD60007DCA3 /* WorldTimeTableViewController.swift */; };
 		DF80A8961D6B8BF90007DCA3 /* ClockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF80A8951D6B8BF90007DCA3 /* ClockCell.swift */; };
 		DF80A8981D6B8CAE0007DCA3 /* TimeZonesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF80A8971D6B8CAE0007DCA3 /* TimeZonesTableViewController.swift */; };
-		DF8413DE1D6BC93C002D6586 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF8413DD1D6BC93C002D6586 /* Main.storyboard */; };
-		DF8413E01D6BC9F4002D6586 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF8413DF1D6BC9F4002D6586 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DF80A87C1D6B8AFD0007DCA3 /* Global Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Global Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF80A87F1D6B8AFD0007DCA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DF80A8841D6B8AFD0007DCA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF80A8861D6B8AFD0007DCA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF80A8891D6B8AFD0007DCA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF80A88B1D6B8AFD0007DCA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF80A8911D6B8B3C0007DCA3 /* ClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		DF80A8931D6B8BD60007DCA3 /* WorldTimeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldTimeTableViewController.swift; sourceTree = "<group>"; };
 		DF80A8951D6B8BF90007DCA3 /* ClockCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockCell.swift; sourceTree = "<group>"; };
 		DF80A8971D6B8CAE0007DCA3 /* TimeZonesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeZonesTableViewController.swift; sourceTree = "<group>"; };
-		DF8413DD1D6BC93C002D6586 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		DF8413DF1D6BC9F4002D6586 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +65,9 @@
 				DF80A8971D6B8CAE0007DCA3 /* TimeZonesTableViewController.swift */,
 				DF80A8951D6B8BF90007DCA3 /* ClockCell.swift */,
 				DF80A8911D6B8B3C0007DCA3 /* ClockView.swift */,
-				DF8413DD1D6BC93C002D6586 /* Main.storyboard */,
-				DF8413DF1D6BC9F4002D6586 /* LaunchScreen.storyboard */,
+				DF80A8831D6B8AFD0007DCA3 /* Main.storyboard */,
 				DF80A8861D6B8AFD0007DCA3 /* Assets.xcassets */,
+				DF80A8881D6B8AFD0007DCA3 /* LaunchScreen.storyboard */,
 				DF80A88B1D6B8AFD0007DCA3 /* Info.plist */,
 			);
 			path = "Global Time";
@@ -133,9 +133,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF8413E01D6BC9F4002D6586 /* LaunchScreen.storyboard in Resources */,
-				DF8413DE1D6BC93C002D6586 /* Main.storyboard in Resources */,
+				DF80A88A1D6B8AFD0007DCA3 /* LaunchScreen.storyboard in Resources */,
 				DF80A8871D6B8AFD0007DCA3 /* Assets.xcassets in Resources */,
+				DF80A8851D6B8AFD0007DCA3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +155,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DF80A8831D6B8AFD0007DCA3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF80A8841D6B8AFD0007DCA3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DF80A8881D6B8AFD0007DCA3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF80A8891D6B8AFD0007DCA3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DF80A88C1D6B8AFD0007DCA3 /* Debug */ = {
@@ -254,7 +273,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = S25RE6SHJT;
 				INFOPLIST_FILE = "Global Time/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tiy.Global-Time";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -268,7 +286,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = S25RE6SHJT;
 				INFOPLIST_FILE = "Global Time/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tiy.Global-Time";
 				PRODUCT_NAME = "$(TARGET_NAME)";

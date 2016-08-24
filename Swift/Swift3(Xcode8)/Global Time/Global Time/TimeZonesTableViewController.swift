@@ -11,8 +11,7 @@ import UIKit
 class TimeZonesTableViewController: UITableViewController
 {
 
-    let timezones = NSTimeZone.knownTimeZoneNames()
-    var timezoneList: [String]?
+    let timezones = NSTimeZone.knownTimeZoneNames
     var delegate: TimeZoneDelegate?
     
     override func viewDidLoad()
@@ -29,19 +28,19 @@ class TimeZonesTableViewController: UITableViewController
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    override func numberOfSections(in tableView: UITableView) -> Int
     {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return timezones.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("TimeZoneCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TimeZoneCell", for: indexPath)
 
         // Configure the cell...
         let aTimezone = timezones[indexPath.row]
@@ -50,9 +49,9 @@ class TimeZonesTableViewController: UITableViewController
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        delegate?.didChooseTimeZone(timezones[indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: true)
+        delegate?.didChooseTimeZone(timezone: timezones[indexPath.row])
     }
 }

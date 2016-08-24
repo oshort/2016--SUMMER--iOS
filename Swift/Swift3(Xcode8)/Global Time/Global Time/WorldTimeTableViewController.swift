@@ -33,19 +33,19 @@ class WorldTimeTableViewController: UITableViewController, UIPopoverPresentation
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    override func numberOfSections(in tableView: UITableView) -> Int
     {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return selectedTimeZones.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ClockCell") as! ClockCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ClockCell", for: indexPath) as! ClockCell
 
         // Configure the cell...
         let timeZoneName = selectedTimeZones[indexPath.row]
@@ -54,7 +54,8 @@ class WorldTimeTableViewController: UITableViewController, UIPopoverPresentation
         {
             cell.clockView.timezone = timezone
         }
-        cell.timeZoneLabel.text = timeZoneName
+        let timezoneComponents = timeZoneName.components(separatedBy: "/")
+        cell.timeZoneLabel.text = timezoneComponents[timezoneComponents.count-1].replacingOccurrences(of: "_", with: " ")
         
 
         return cell
@@ -62,7 +63,7 @@ class WorldTimeTableViewController: UITableViewController, UIPopoverPresentation
     
     func didChooseTimeZone(timezone: String)
     {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
         selectedTimeZones.append(timezone)
         tableView.reloadData()
     }
@@ -70,19 +71,19 @@ class WorldTimeTableViewController: UITableViewController, UIPopoverPresentation
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.identifier == "PopoverTimeZonesSegue"
         {
-            let timeZonesTVC = segue.destinationViewController as! TimeZonesTableViewController
+            let timeZonesTVC = segue.destination as! TimeZonesTableViewController
             timeZonesTVC.popoverPresentationController?.delegate = self
-            timeZonesTVC.preferredContentSize = CGSize(width: 200, height: view.frame.size.height / 2.0)
+            timeZonesTVC.preferredContentSize = CGSize(width: view.frame.size.width * 0.7, height: view.frame.size.height * 0.7)
             timeZonesTVC.delegate = self
         }
     }
     
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle
     {
-        return .None
+        return .none
     }
 }
